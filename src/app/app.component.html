@@ -1,8 +1,14 @@
-<h1>Let's start exploring!</h1>
-<h2>{{ title }}</h2>
-<hr>
+<header>
+  <h1>Let's start exploring!</h1>
+  <h2>{{ title }}</h2>
+</header>
+
+<!-- sign in / sign up -->
+<app-navigation></app-navigation>
+<hr />
 
 <footer
+  *ngIf="mode !== ''"
   style="
     position: fixed;
     bottom: 0;
