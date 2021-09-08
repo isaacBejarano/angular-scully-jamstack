@@ -1,8 +1,9 @@
 <h1>Let's start exploring!</h1>
 <h2>{{ title }}</h2>
-<hr>
+<hr />
 
 <footer
+  *ngIf="mode !== ''"
   style="
     position: fixed;
     bottom: 0;
