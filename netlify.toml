@@ -1,0 +1,11 @@
+[build]
+	publish = "dist/static"
+	command = "npm run jam"
+
+[[redirects]]
+	from = "/*"
+	to = "index.html"
+	status = 301
+
+# NOTE: Scully deploys to Netlyfy only worked in prev img verion: "Ubuntu Xenial 16.04" (Site Setings > Build & deploiy > Build image selection)
+# NOTE: Don't exceed the monthly available "deploy minutes" for free, setting up the production branch to "release" instead of "master"
