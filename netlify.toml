@@ -7,5 +7,12 @@
 	to = "/"
 	status = 301
 
+# Plugins
+[[plugins]]
+  package = "netlify-plugin-minify-html"
+
+  [plugins.inputs]
+    contexts = ['production','deploy-preview']
+	
 # NOTE: Scully deploys to Netlyfy only worked in prev img verion: "Ubuntu Xenial 16.04" (Site Setings > Build & deploiy > Build image selection)
 # NOTE: Don't exceed the monthly available "deploy minutes" for free, setting up the production branch to "release" instead of "master"
