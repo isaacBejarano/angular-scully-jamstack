@@ -3,11 +3,15 @@
   <h2>{{ title }}</h2>
 </header>
 
-<hr>
 
 <!-- sign in / sign up -->
-<!-- <app-navigation></app-navigation> -->
+<app-navigation></app-navigation>
+
 <hr />
+
+<main>
+  <router-outlet></router-outlet>
+</main>
 
 <footer
   *ngIf="mode !== ''"
@@ -21,5 +25,3 @@
 >
   {{ mode }}
 </footer>
-
-<router-outlet></router-outlet>
