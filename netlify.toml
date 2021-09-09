@@ -7,18 +7,12 @@
 	to = "/"
 	status = 301
 
-[[plugins]]
-  package = "netlify-plugin-minify-html"
 
-  [plugins.inputs]
-    contexts = [
-      'production',
-      'branch-deploy',
-      'deploy-preview'
-    ]
+# NOTES:
 
-# SCULLY DEPlOYS: Scully deploys to Netlyfy only worked in prev img verion: "Ubuntu Xenial 16.04" (Site Setings > Build & deploiy > Build image selection)
-# EXCEED DEPLOY MINUTES: Don't exceed the monthly available "deploy minutes" for free, setting up the production branch to "release" instead of "master"
-	# You can also use plugin "Deployment hours" to block deployment if outta free minutes.
-# PLUGIN "Minify HTML" not working in Netlify UI
-    # Use it locally as devDependency + .toml
+# SCULLY - deploy to Netlyfy --> only worked in prev img verion: "Ubuntu Xenial 16.04"
+# (Site Setings > Build & deploiy > Build image selection)
+
+# DEPLOY MINUTES --> Don't exceed the monthly available "deploy minutes" for free,
+# setting up the production branch to "release" instead of "master" and
+# you can also use the plugin "Deployment hours" to block deployment if outta free minutes.
