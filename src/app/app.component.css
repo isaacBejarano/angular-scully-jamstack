@@ -1,0 +1,11 @@
+header {
+  background-color: wheat;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  border: 1px solid crimson;
+  padding: 0.5rem;
+  background-color: lightpink;
+}

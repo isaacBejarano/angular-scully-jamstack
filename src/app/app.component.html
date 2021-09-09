@@ -22,15 +22,6 @@
   <router-outlet></router-outlet>
 </main>
 
-<footer
-  *ngIf="mode !== ''"
-  style="
-    position: fixed;
-    bottom: 0;
-    border: 1px solid crimson;
-    padding: 0.5rem;
-    background-color: lightpink;
-  "
->
+<footer *ngIf="mode !== ''">
   {{ mode }}
 </footer>
