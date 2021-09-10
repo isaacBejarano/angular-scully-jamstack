@@ -12,7 +12,7 @@ const postRenderers = [MinifyHtml];
 
 const minifyHtmlOptions: MinifyHtmlOptions = {
   minifyOptions: {
-    removeComments: false,
+    removeComments: true,
   },
 };
 setPluginConfig(MinifyHtml, 'render', minifyHtmlOptions);
