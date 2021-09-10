@@ -1,9 +1,10 @@
 import { ScullyConfig } from '@scullyio/scully';
-const { MinifyHtml } = require('scully-plugin-minify-html'); // <- dep: html-minifier
+const { MinifyHtml } = require('scully-plugin-minify-html'); // <- dep: [html-minifier, tslib]
+const { RemoveUnusedCSSPlugin } = require('scully-plugin-remove-unused-css'); // <- dep: [extract-css, purgeCSS]
 require('@notiz/scully-plugin-lazy-images'); // 'lazyImages'
 
-
-const postRenderers = [MinifyHtml, 'lazyImages'];
+// FIXME: "scully-plugin-minify-html" is using deprecated plugin type:"render"  use "postProcessByHtml" instead
+const postRenderers = [MinifyHtml, RemoveUnusedCSSPlugin, 'lazyImages'];
 
 export const config: ScullyConfig = {
   projectRoot: './src',

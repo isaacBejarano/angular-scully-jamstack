@@ -1,7 +1,5 @@
-/* Algolia */
-body {
-  font-family: sans-serif;
-}
-.ais-SearchBox {
-  margin-bottom: 1em;
+/* UNUSED CSS: to test scully plugin */
+
+.unused-css {
+  color: red;
 }
