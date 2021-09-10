@@ -37,7 +37,7 @@ const minifyHtmlOptions: MinifyHtmlOptions = {
     // ]
   },
 };
-setPluginConfig(MinifyHtml, 'render', minifyHtmlOptions);
+setPluginConfig(MinifyHtml, 'postProcessByHtml', minifyHtmlOptions);
 
 export const config: ScullyConfig = {
   projectRoot: './src',
