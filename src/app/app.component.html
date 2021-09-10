@@ -24,7 +24,19 @@
 <h4 style="color: mediumslateblue; background-color: lavender">
   Algolia Crawler
 </h4>
-<div id="search"></div>
+<ais-instantsearch [config]="config">
+  <ais-search-box></ais-search-box>
+  <ais-hits>
+    <ng-template let-hits="hits">
+      <ol class="ais-Hits-list">
+        <li *ngFor="let hit of hits" class="ais-Hits-item">
+         {{hit.name}}
+        </li>
+      </ol>
+    </ng-template>
+  </ais-hits>
+</ais-instantsearch>
+
 <hr />
 
 <!-- sign in / sign up -->

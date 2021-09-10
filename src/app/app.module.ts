@@ -9,6 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 // components
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { AboutComponent } from './pages/about/about.component';
+import { NgAisModule } from 'angular-instantsearch';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AboutComponent } from './pages/about/about.component';
     AboutComponent
   ],
   imports: [
+    NgAisModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     ScullyLibModule
