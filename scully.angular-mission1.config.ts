@@ -1,9 +1,12 @@
 import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
+import { Options } from 'html-minifier-terser';
 const { MinifyHtml } = require('scully-plugin-minify-html'); // <- dep: html-minifier
-import { Options } from 'html-minifier';
 require('@notiz/scully-plugin-lazy-images'); // 'lazyImages'
 
-const minifyOptions: Options = {
+// FIXME: Options not working: 'render' deprectaed. use "postProcessByHtml" instead.
+// TODO: FORK REPO + PR html-minifier and updating accordingly to Scully updates
+
+const minifyHtmlOptions: Options = {
   // caseSensitive: true,
   removeComments: false,
   // collapseWhitespace: true,
@@ -27,9 +30,9 @@ const minifyOptions: Options = {
   // ignoreCustomFragments: [/\/\*\* ___SCULLY_STATE_(START|END)___ \*\//],
 };
 
-// setPluginConfig(MinifyHtml, minifyHtmlOptions);
+setPluginConfig(MinifyHtml, minifyHtmlOptions);
 
-const postRenderers = [ MinifyHtml, 'lazyImages' ];
+const postRenderers = [MinifyHtml, 'lazyImages'];
 
 export const config: ScullyConfig = {
   projectRoot: './src',
