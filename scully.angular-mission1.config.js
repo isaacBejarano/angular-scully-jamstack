@@ -1,15 +1,17 @@
-import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
-
-import { MinifyHtml } from 'scully-plugin-minify-html'; // <- dep: [html-minifier, tslib]
-import { MinifyHtmlOptions } from 'scully-plugin-minify-html/lib';
-
+"use strict";
+var __spreadArray = (this && this.__spreadArray) || function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.config = void 0;
+var scully_1 = require("@scullyio/scully");
 // const { RemoveUnusedCSSPlugin } = require('scully-plugin-remove-unused-css'); // <- dep: [extract-css, purgeCSS]
-
 // FIXME: "scully-plugin-minify-html" is using deprecated plugin type:"render"  use "postProcessByHtml" instead
-const postRenderers = ['minifyHtml'];
-
-const minifyHtmlOptions: MinifyHtmlOptions = {
-  minifyOptions: {
+var postRenderers = ['MinifyHtml'];
+var minifyHtmlOptions = {
+    minifyOptions: {
     // caseSensitive: true,
     // removeComments: true,
     // collapseWhitespace: true,
@@ -35,16 +37,15 @@ const minifyHtmlOptions: MinifyHtmlOptions = {
     // ignoreCustomFragments: [
     //   /\/\*\* ___SCULLY_STATE_(START|END)___ \*\//
     // ]
-  },
+    },
 };
-setPluginConfig('MinifyHtml', 'postProcessByHtml', minifyHtmlOptions);
-
-export const config: ScullyConfig = {
-  projectRoot: './src',
-  projectName: 'angular-mission1',
-  outDir: './dist/static',
-  defaultPostRenderers: [...postRenderers],
-  routes: {
+scully_1.setPluginConfig('MinifyHtml', 'postProcessByHtml', minifyHtmlOptions);
+exports.config = {
+    projectRoot: './src',
+    projectName: 'angular-mission1',
+    outDir: './dist/static',
+    defaultPostRenderers: __spreadArray([], postRenderers),
+    routes: {
     /* Plugins fos specific Routes */
     // '/blog/:slug': {
     //   type: 'contentFolder',
@@ -53,5 +54,5 @@ export const config: ScullyConfig = {
     //   },
     //   postRenderers: ['MinifyHtml'] // <== HERE!
     // }
-  },
+    },
 };
