@@ -1,5 +1,5 @@
 import { ScullyConfig } from '@scullyio/scully';
-const { MinifyHtml } = require('scully-plugin-minify-html'); // <- dep: [html-minifier, tslib]
+// const { MinifyHtml } = require('scully-plugin-minify-html'); // <- dep: [html-minifier, tslib]
 // const { RemoveUnusedCSSPlugin } = require('scully-plugin-remove-unused-css'); // <- dep: [extract-css, purgeCSS]
 // require('@notiz/scully-plugin-lazy-images'); // 'lazyImages'
 

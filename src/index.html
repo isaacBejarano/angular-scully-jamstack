@@ -8,9 +8,16 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <!-- Netlify API - Identity -->
     <script
-      type="text/javascript"
-      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    type="text/javascript"
+    src="https://identity.netlify.com/v1/netlify-identity-widget.js"
     ></script>
+    
+    <!-- Native DOM - img lazy loading -->
+    <script>
+      "loading" in HTMLImageElement.prototype
+        ? console.log("El navegador soporta `lazy-loading`...")
+        : console.log("`lazy-loading` no soportado...");
+    </script>
   </head>
 
   <body>
