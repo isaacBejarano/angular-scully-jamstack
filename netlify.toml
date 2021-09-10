@@ -12,6 +12,13 @@
 		[plugins.inputs]
   			branches = ['release']
 
+[[plugins]]
+	package = "netlify-plugin-minify-html"  	
+		[plugins.inputs]
+			caseSensitive = true
+  			collapseWhitespace = true
+  			preserveLineBreaks = false
+
 
 # NOTES:
 

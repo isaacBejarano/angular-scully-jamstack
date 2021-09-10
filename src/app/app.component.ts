@@ -24,3 +24,6 @@ export class AppComponent {
     searchClient,
   };
 }
+
+// FIXME: fetch last last-1 commit [dont use Angular Component]
+// Use NTL UI + .toml
