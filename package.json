@@ -9,7 +9,7 @@
     "test": "ng test",
     "scully": "npx scully --",
     "scully:serve": "npx scully serve --",
-    "jam": "ng build && npx scully -- --scanRoutes"
+    "jam": "ng build && npx scully --scanRoutes"
   },
   "private": true,
   "dependencies": {
