@@ -8,12 +8,14 @@ import { HomeComponent } from './pages/home/home.component';
 
 // components
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavigationComponent
+    NavigationComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

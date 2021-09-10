@@ -9,4 +9,6 @@ import { environment } from 'src/environments/environment';
 export class AppComponent {
   title = 'angular-mission1';
   mode = environment.mode;
+
+  // TODO: check Algolia Crawler works
 }
