@@ -1,6 +1,6 @@
 import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
 
-// import { MinifyHtml } from 'scully-plugin-minify-html'; // <- dep: [html-minifier, tslib]
+import { MinifyHtml } from 'scully-plugin-minify-html'; // <- dep: [html-minifier, tslib]
 import { MinifyHtmlOptions } from 'scully-plugin-minify-html/lib';
 
 // const { RemoveUnusedCSSPlugin } = require('scully-plugin-remove-unused-css'); // <- dep: [extract-css, purgeCSS]
@@ -37,7 +37,7 @@ const minifyHtmlOptions: MinifyHtmlOptions = {
     // ]
   },
 };
-setPluginConfig('minifyHtml', 'postProcessByHtml', minifyHtmlOptions);
+setPluginConfig(MinifyHtml, 'postProcessByHtml', minifyHtmlOptions);
 
 export const config: ScullyConfig = {
   projectRoot: './src',
