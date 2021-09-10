@@ -1,36 +1,7 @@
-import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
-import { Options } from 'html-minifier-terser';
+import { ScullyConfig } from '@scullyio/scully';
 const { MinifyHtml } = require('scully-plugin-minify-html'); // <- dep: html-minifier
 require('@notiz/scully-plugin-lazy-images'); // 'lazyImages'
 
-// FIXME: Options not working: 'render' deprectaed. use "postProcessByHtml" instead.
-// TODO: FORK REPO + PR html-minifier and updating accordingly to Scully updates
-
-const minifyHtmlOptions: Options = {
-  // caseSensitive: true,
-  removeComments: false,
-  // collapseWhitespace: true,
-  // collapseBooleanAttributes: true,
-  // removeRedundantAttributes: true,
-  // useShortDoctype: true,
-  // removeEmptyAttributes: true,
-  // minifyCSS: true,
-  // minifyJS: true,
-  // removeScriptTypeAttributes: true,
-  // removeStyleLinkTypeAttributes: true,
-  // // don't remove attribute quotes, not all social media platforms can parse this over-optimization
-  // removeAttributeQuotes: false,
-  // // don't remove optional tags, like the head, not all social media platforms can parse this over-optimization
-  // removeOptionalTags: false,
-  // // scully specific HTML comments
-  // // this will always be added in the final minifyOptions config
-  // ignoreCustomComments: [/scullyContent-(begin|end)/],
-  // // scully specific data injection
-  // // this will always be added in the final minifyOptions config
-  // ignoreCustomFragments: [/\/\*\* ___SCULLY_STATE_(START|END)___ \*\//],
-};
-
-setPluginConfig(MinifyHtml, minifyHtmlOptions);
 
 const postRenderers = [MinifyHtml, 'lazyImages'];
 
