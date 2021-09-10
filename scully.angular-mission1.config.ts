@@ -6,7 +6,7 @@ import { MinifyHtmlOptions } from 'scully-plugin-minify-html/lib';
 // const { RemoveUnusedCSSPlugin } = require('scully-plugin-remove-unused-css'); // <- dep: [extract-css, purgeCSS]
 
 // FIXME: "scully-plugin-minify-html" is using deprecated plugin type:"render"  use "postProcessByHtml" instead
-const postRenderers = ['minifyHtml'];
+const postRenderers = [MinifyHtml];
 
 const minifyHtmlOptions: MinifyHtmlOptions = {
   minifyOptions: {
