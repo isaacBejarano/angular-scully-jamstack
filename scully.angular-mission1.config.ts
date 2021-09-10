@@ -3,20 +3,20 @@ import { ScullyConfig } from '@scullyio/scully';
 // const { RemoveUnusedCSSPlugin } = require('scully-plugin-remove-unused-css'); // <- dep: [extract-css, purgeCSS]
 // require('@notiz/scully-plugin-lazy-images'); // 'lazyImages'
 
-import '@notiz/scully-plugin-lazy-images';
+// import '@notiz/scully-plugin-lazy-images';
 
 // FIXME: "scully-plugin-minify-html" is using deprecated plugin type:"render"  use "postProcessByHtml" instead
-const postRenderers = [
+// const postRenderers = [
   // MinifyHtml,
   // RemoveUnusedCSSPlugin,
-  'lazyImages',
-];
+  // 'lazyImages',
+// ];
 
 export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'angular-mission1',
   outDir: './dist/static',
-  defaultPostRenderers: [...postRenderers],
+  // defaultPostRenderers: [...postRenderers],
   routes: {
     /* Plugins fos specific Routes */
     // '/blog/:slug': {
