@@ -12,6 +12,35 @@
       src="https://identity.netlify.com/v1/netlify-identity-widget.js"
     ></script>
 
+    <!-- Netlify API - Algolia -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"
+    ></script>
+    <script type="text/javascript">
+      algoliasearchNetlify({
+        appId: "GQ8AR65179",
+        apiKey:
+          "a8db1427d53f871774479aaf993ecf85684474a88bde004e79f174a4acb7c89b",
+        siteId: "8e5616f4-f986-4d35-8a42-38a34e38a4a7",
+        branch: "release",
+        selector: "div#search",
+        placeholder: "Search something great...",
+        detached: { mediaQuery: "(max-width: 500px)" },
+        theme: {
+          mark: "#fff", // Color of the matching content
+          background: "#23263b", // Background Color of the input and the panel
+          selected: "#111432", // Background Color of the selected item
+          text: "pink", // Color of the title of the items
+          colorSourceIcon: "pink", // Color of the icon on the left of results
+        },
+      });
+    </script>
+
     <!-- DOM Image Lazy Loading - warning -->
     <script>
       if (!"loading" in HTMLImageElement.prototype)

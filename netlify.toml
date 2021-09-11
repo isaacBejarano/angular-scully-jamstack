@@ -7,6 +7,11 @@
 	to = "/"
 	status = 301
 
+[[plugins]]
+	package = "@algolia/netlify-plugin-crawler"
+  		[plugins.inputs]
+  			branches = ['release']
+
 # NOTES:
 
 # SCULLY - deploy to Netlyfy --> only worked in prev img verion: "Ubuntu Xenial 16.04"
