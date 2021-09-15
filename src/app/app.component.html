@@ -1,19 +1,18 @@
-<header>
-  <h1>Let's start exploring!</h1>
-  <h2>{{ title }}</h2>
-</header>
+<div>
+  <p style="font-size: 2rem">Let's start exploring!</p>
+  <p style="font-size: 1.5rem">{{ title }}</p>
+</div>
 
-<h3>Trying plugins...</h3>
+<h1>Trying plugins...</h1>
 <ul>
   <li>Chromium - use Ubuntu Xenial 16.04</li>
   <li>HTML & CSs minifiers</li>
   <li>Algolia</li>
   <li>Sitemap</li>
-  <li>Subfonr</li>
   <li>others...</li>
 </ul>
 
-<h4>MENU</h4>
+<h2>MENU</h2>
 <ul>
   <li><a routerLink="home">Home</a></li>
   <li><a routerLink="about">About</a></li>
@@ -21,9 +20,9 @@
 <hr />
 
 <!-- Algolia -->
-<h4 style="color: mediumslateblue; background-color: lavender">
+<small style="color: mediumslateblue; background-color: lavender">
   Algolia Crawler
-</h4>
+</small>
 <div id="search"></div>
 
 <!-- <ais-instantsearch [config]="algoliaConfig">
@@ -39,9 +38,7 @@
 
 <hr />
 
-<main>
-  <router-outlet></router-outlet>
-</main>
+<router-outlet></router-outlet>
 
 <footer *ngIf="mode !== ''">
   {{ mode }}
