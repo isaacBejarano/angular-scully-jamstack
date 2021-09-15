@@ -6,7 +6,6 @@
 	package = "@algolia/netlify-plugin-crawler"
   	[plugins.inputs]
   	branches = ['release']
-  	renderJavaScript = true
 
 [[redirects]]
 	from = "/*"
