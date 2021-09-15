@@ -3,9 +3,10 @@
 	command = "npm run jam"
 
 [[plugins]]
-package = "@algolia/netlify-plugin-crawler"
-  [plugins.inputs]
-  branches = ['release']
+	package = "@algolia/netlify-plugin-crawler"
+  	[plugins.inputs]
+  	branches = ['release']
+  	renderJavaScript = true
 
 [[redirects]]
 	from = "/*"
