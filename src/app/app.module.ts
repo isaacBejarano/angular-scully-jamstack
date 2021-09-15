@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ScullyLibModule } from '@scullyio/ng-lib';
+
+// components
 import { HomeComponent } from './pages/home/home.component';
+
+// modules
+import { ScullyLibModule } from '@scullyio/ng-lib';
+import { NgAisModule } from 'angular-instantsearch';
 
 // components
 import { NavigationComponent } from './components/navigation/navigation.component';
@@ -15,14 +19,15 @@ import { AboutComponent } from './pages/about/about.component';
     AppComponent,
     NavigationComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ScullyLibModule
+    ScullyLibModule,
+    NgAisModule.forRoot(),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
