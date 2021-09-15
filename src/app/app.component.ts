@@ -10,3 +10,6 @@ export class AppComponent {
   title = 'angular-mission1';
   mode = environment.mode;
 }
+
+// FIXME: prueba ANGULA PLUGIN: https://www.algolia.com/blog/product/bringing-search-to-angular/
+// https://community.algolia.com/angular-instantsearch/
