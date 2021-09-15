@@ -9,8 +9,9 @@
 
 [[plugins]]
 	package = "@algolia/netlify-plugin-crawler"
-  		[plugins.inputs]
-  			branches = ['release']
+	[plugins.inputs]
+  		branches = ['release']
+
 
 # NOTES:
 
