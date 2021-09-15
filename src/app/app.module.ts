@@ -8,7 +8,6 @@ import { HomeComponent } from './pages/home/home.component';
 
 // modules
 import { ScullyLibModule } from '@scullyio/ng-lib';
-import { NgAisModule } from 'angular-instantsearch';
 
 // components
 import { NavigationComponent } from './components/navigation/navigation.component';
@@ -25,7 +24,6 @@ import { AboutComponent } from './pages/about/about.component';
     BrowserModule,
     AppRoutingModule,
     ScullyLibModule,
-    NgAisModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
