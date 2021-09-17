@@ -2,10 +2,10 @@
 	publish = "dist/static"
 	command = "npm run jam"
 
-[[plugins]]
-	package = "@algolia/netlify-plugin-crawler"
-  	[plugins.inputs]
-  	branches = ['release']
+# [[plugins]]
+# 	package = "@algolia/netlify-plugin-crawler"
+#   	[plugins.inputs]
+#   	branches = ['release']
 
 [[redirects]]
 	from = "/*"
